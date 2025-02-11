@@ -11,3 +11,23 @@ function getProductsByCategory(products, category) {
 }
 
 console.log(getProductsByCategory(products, "Electronics"));
+
+// Task 2
+
+function applyDiscount(products, discountRate) {
+    return products.map(product => ({
+        ...product,
+        price: product.price - (product.price * discountRate)
+    }
+
+    ) )
+}
+
+console.log(applyDiscount(products, 0.1));
+
+// Example
+function sum3(x, y, z) {
+    return x+y+z;
+}
+let numbers = [1,2,3]; //iterable - can loop through it
+console.log(sum3(...numbers));
